@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#063C7A"/>
+      <stop offset="50%" stop-color="#092B52"/>
+      <stop offset="100%" stop-color="#031628"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BB1019"/>
+      <stop offset="100%" stop-color="#4AB87E"/>
+    </linearGradient>
+    <pattern id="mediaGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+      <circle cx="20" cy="20" r="1.5" fill="rgba(255,255,255,0.08)"/>
+    </pattern>
+    <pattern id="scanlines" width="100" height="6" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="3" x2="100" y2="3" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="650" fill="url(#sky)"/>
+  <rect width="1600" height="650" fill="url(#mediaGrid)"/>
+  <rect width="1600" height="650" fill="url(#scanlines)"/>
+
+  <!-- University Architectural Silhouettes -->
+  <g opacity="0.16" fill="#FFFFFF">
+    <path d="M 120 650 L 120 480 L 160 480 L 160 440 L 220 440 L 220 480 L 260 480 L 260 650 Z"/>
+    <path d="M 280 650 L 280 500 L 450 500 L 450 650 Z"/>
+    <!-- Classical Pareeksha Bhavana University Dome -->
+    <path d="M 680 650 L 680 450 L 720 450 L 720 370 Q 820 270 920 370 L 920 450 L 960 450 L 960 650 Z"/>
+    <rect x="805" y="240" width="30" height="50"/>
+    <polygon points="820,200 800,240 840,240"/>
+    <rect x="740" y="450" width="16" height="200"/>
+    <rect x="780" y="450" width="16" height="200"/>
+    <rect x="820" y="450" width="16" height="200"/>
+    <rect x="860" y="450" width="16" height="200"/>
+    <rect x="900" y="450" width="16" height="200"/>
+    <!-- Right Wing -->
+    <path d="M 980 650 L 980 490 L 1180 490 L 1180 650 Z"/>
+    <path d="M 1200 650 L 1200 460 L 1340 460 L 1340 650 Z"/>
+  </g>
+
+  <!-- Broadcast Waves & Studio Audio Signals -->
+  <g stroke="rgba(74, 184, 126, 0.3)" stroke-width="2" fill="none">
+    <path d="M 150 280 Q 350 140 550 280 T 950 280 T 1350 280 T 1650 280" stroke-dasharray="6,6"/>
+    <path d="M 250 310 Q 450 190 650 310 T 1050 310 T 1450 310" stroke="rgba(187, 16, 25, 0.25)"/>
+  </g>
+
+  <!-- Transmission Antenna Motifs -->
+  <g transform="translate(1420, 160)" opacity="0.3" stroke="#FFFFFF" stroke-width="2" fill="none">
+    <line x1="60" y1="20" x2="20" y2="340"/>
+    <line x1="60" y1="20" x2="100" y2="340"/>
+    <line x1="30" y1="120" x2="90" y2="120"/>
+    <line x1="25" y1="200" x2="95" y2="200"/>
+    <circle cx="60" cy="20" r="8" fill="#BB1019" stroke="none"/>
+    <circle cx="60" cy="20" r="28" stroke="#4AB87E" stroke-width="2" stroke-dasharray="4,4"/>
+    <circle cx="60" cy="20" r="50" stroke="#4AB87E" stroke-width="2" stroke-dasharray="4,6"/>
+  </g>
+
+  <!-- Camera Aperture & Cinematic Geometric Overlay -->
+  <g transform="translate(140, 140)" opacity="0.25" stroke="#FFFFFF" stroke-width="2" fill="none">
+    <circle cx="80" cy="80" r="75"/>
+    <circle cx="80" cy="80" r="55" stroke="#BB1019"/>
+    <polygon points="40,50 90,30 130,65 120,120 70,140 30,105"/>
+  </g>
+
+  <!-- Dynamic Studio Ambient Glow -->
+  <ellipse cx="800" cy="620" rx="550" ry="160" fill="url(#accentGrad)" opacity="0.18" filter="blur(30px)"/>
+</svg>

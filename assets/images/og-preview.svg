@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="ogGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#063C7A"/>
+      <stop offset="100%" stop-color="#021424"/>
+    </linearGradient>
+    <linearGradient id="topLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BB1019"/>
+      <stop offset="50%" stop-color="#4AB87E"/>
+      <stop offset="100%" stop-color="#063C7A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#ogGrad)"/>
+  <rect x="0" y="0" width="1200" height="12" fill="url(#topLine)"/>
+
+  <g transform="translate(80, 80)">
+    <!-- University Pill -->
+    <rect x="0" y="0" width="220" height="36" rx="11" fill="#BB1019"/>
+    <text x="110" y="23" fill="#FFFFFF" font-family="'Segoe UI', -apple-system, sans-serif" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1.5">BANGALORE UNIVERSITY</text>
+
+    <!-- Main Title -->
+    <text x="0" y="105" fill="#FFFFFF" font-family="Georgia, serif" font-size="52" font-weight="bold">Department of Electronic Media</text>
+    <text x="0" y="155" fill="#4AB87E" font-family="'Segoe UI', sans-serif" font-size="22" font-weight="600" letter-spacing="0.8">Jnana Bharathi Campus, Bengaluru • Established 2002</text>
+
+    <!-- Description -->
+    <text x="0" y="225" fill="#F4F9F3" font-family="'Segoe UI', sans-serif" font-size="19" opacity="0.9">
+      Post-Graduate &amp; Doctoral Programs: M.Sc. Electronic Media | Graphics &amp; Animation | Film Making | Ph.D.
+    </text>
+
+    <!-- Badges with 11px Corner Radius -->
+    <g transform="translate(0, 280)">
+      <rect x="0" y="0" width="310" height="85" rx="11" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.18)"/>
+      <text x="24" y="36" fill="#4AB87E" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold">20+ Years</text>
+      <text x="24" y="62" fill="#FFFFFF" font-family="'Segoe UI', sans-serif" font-size="14" opacity="0.85">Media Training &amp; Research</text>
+
+      <rect x="340" y="0" width="330" height="85" rx="11" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.18)"/>
+      <text x="364" y="36" fill="#4AB87E" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold">TV Studio &amp; Mac Lab</text>
+      <text x="364" y="62" fill="#FFFFFF" font-family="'Segoe UI', sans-serif" font-size="14" opacity="0.85">Advanced Broadcast Infrastructure</text>
+
+      <rect x="700" y="0" width="330" height="85" rx="11" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.18)"/>
+      <text x="724" y="36" fill="#4AB87E" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold">BU News Webcast</text>
+      <text x="724" y="62" fill="#FFFFFF" font-family="'Segoe UI', sans-serif" font-size="14" opacity="0.85">Daily 30-min News Bulletin</text>
+    </g>
+
+    <text x="0" y="450" fill="#FFFFFF" opacity="0.75" font-family="'Segoe UI', sans-serif" font-size="16">
+      Old Pareeksha Bhavana, Jnana Bharathi Campus, Bengaluru - 560056 • Tel: 080 22961319
+    </text>
+  </g>
+</svg>
