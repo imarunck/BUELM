@@ -305,7 +305,7 @@ ol {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   border-bottom: 2px solid var(--color-border);
   box-shadow: var(--shadow-subtle);
@@ -316,18 +316,22 @@ ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: var(--header-height);
+  min-height: 56px;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 
 .brand-link {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
+  min-width: 0;
+  flex: 1;
 }
 
 .brand-monogram {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   color: #FFFFFF;
   border-radius: var(--radius-ui);
@@ -335,38 +339,43 @@ ol {
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1rem;
   letter-spacing: -0.02em;
   box-shadow: 0 3px 8px rgba(187, 16, 25, 0.25);
   flex-shrink: 0;
 }
 
 .brand-logo-img {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   object-fit: cover;
   border-radius: var(--radius-ui);
   border: 1px solid var(--color-border);
-  box-shadow: 0 2px 8px rgba(6, 60, 122, 0.12);
+  box-shadow: 0 2px 6px rgba(6, 60, 122, 0.12);
   flex-shrink: 0;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .brand-title {
-  font-size: 1.05rem;
+  font-size: clamp(0.85rem, 3.6vw, 1.05rem);
   font-weight: 700;
   color: var(--color-secondary);
-  line-height: 1.15;
+  white-space: normal;
 }
 
 .brand-sub {
-  font-size: 0.75rem;
+  font-size: clamp(0.68rem, 2.5vw, 0.75rem);
   color: var(--color-text-muted);
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Navigation Menu */
@@ -375,13 +384,17 @@ ol {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  width: 42px;
-  height: 42px;
+  gap: 4px;
+  width: 38px;
+  height: 38px;
+  padding: 0;
   border-radius: var(--radius-ui);
   border: 1px solid var(--color-border);
   background-color: var(--color-surface);
   color: var(--color-secondary);
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  cursor: pointer;
   transition: var(--transition-fast);
 }
 
@@ -390,8 +403,8 @@ ol {
 }
 
 .nav-toggle-bar {
-  width: 22px;
-  height: 2.5px;
+  width: 20px;
+  height: 2px;
   background-color: var(--color-secondary);
   border-radius: 2px;
   transition: var(--transition-fast);
@@ -404,11 +417,11 @@ ol {
   right: 0;
   background-color: var(--color-surface);
   border-bottom: 2px solid var(--color-border);
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.25rem;
   box-shadow: var(--shadow-lg);
   display: none;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
 
 .nav-menu.is-active {
@@ -416,7 +429,7 @@ ol {
 }
 
 .nav-link {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-secondary);
   padding: 0.65rem 0.85rem;
@@ -444,10 +457,11 @@ ol {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 0.92rem;
-  padding: 0.65rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   border-radius: var(--radius-ui);
   box-shadow: 0 4px 10px rgba(187, 16, 25, 0.2);
   transition: var(--transition-fast);
+  text-align: center;
 }
 
 .nav-cta-btn:hover {
@@ -457,7 +471,7 @@ ol {
 }
 
 /* --------------------------------------------------------------------------
-   7. INSTITUTIONAL HERO BANNER SECTION
+   7. INSTITUTIONAL HERO BANNER SECTION (MOBILE-FIRST)
    -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
@@ -482,7 +496,7 @@ ol {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: 0.4;
+  opacity: 0.35;
   filter: contrast(110%);
 }
 
@@ -493,38 +507,38 @@ ol {
   right: 0;
   bottom: 0;
   z-index: 2;
-  background: linear-gradient(135deg, rgba(6, 60, 122, 0.94) 0%, rgba(3, 37, 76, 0.88) 60%, rgba(187, 16, 25, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(6, 60, 122, 0.95) 0%, rgba(3, 37, 76, 0.92) 60%, rgba(187, 16, 25, 0.45) 100%);
   /* Digital scanline texture */
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.02) 50%, transparent 50%),
-    linear-gradient(90deg, rgba(6, 60, 122, 0.92), rgba(3, 37, 76, 0.92));
+  linear-gradient(90deg, rgba(6, 60, 122, 0.94), rgba(3, 37, 76, 0.94));
   background-size: 100% 4px, 100% 100%;
 }
 
 .hero-content {
   position: relative;
   z-index: 3;
-  padding: 3.5rem 0 4rem;
+  padding: 2.25rem 0 2.75rem;
 }
 
 .hero-pill-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
 }
 
 .hero-pill {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #FFFFFF;
-  font-size: 0.8rem;
+  font-size: clamp(0.72rem, 2.4vw, 0.8rem);
   font-weight: 600;
-  padding: 0.3rem 0.8rem;
+  padding: 0.25rem 0.65rem;
   border-radius: var(--radius-ui);
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .hero-pill-live {
@@ -535,35 +549,46 @@ ol {
 }
 
 .hero-title {
-  font-size: 2.15rem;
-  font-weight: 700;
-  line-height: 1.18;
-  margin-bottom: 0.85rem;
+  font-size: clamp(1.6rem, 6.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
   color: #FFFFFF;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  word-break: break-word;
 }
 
 .hero-univ-tag {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: clamp(0.95rem, 3.4vw, 1.25rem);
   color: rgba(255, 255, 255, 0.92);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9rem;
   font-style: italic;
+  line-height: 1.35;
 }
 
 .hero-lead {
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: clamp(0.92rem, 2.8vw, 1.05rem);
+  line-height: 1.55;
   max-width: 680px;
   color: rgba(255, 255, 255, 0.88);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-bottom: 2.5rem;
+  flex-direction: column;
+  gap: 0.65rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions .btn {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.92rem;
+  text-align: center;
+  justify-content: center;
 }
 
 .btn {
@@ -571,17 +596,19 @@ ol {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 1.5rem;
   font-size: 0.95rem;
   font-weight: 700;
   border-radius: var(--radius-ui);
   transition: all var(--transition-fast);
   text-align: center;
+  text-decoration: none;
 }
 
 .btn-primary {
   background-color: var(--color-primary);
   color: #FFFFFF;
+  border: 1px solid var(--color-primary);
   box-shadow: 0 4px 14px rgba(187, 16, 25, 0.35);
 }
 
@@ -617,21 +644,33 @@ ol {
   color: #FFFFFF;
 }
 
+.btn-outline-light {
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
 .btn-sm {
   padding: 0.5rem 1rem;
   font-size: 0.85rem;
 }
 
 /* --------------------------------------------------------------------------
-   8. INTERACTIVE GRAPHIC / STATS FEATURE
+   8. INTERACTIVE GRAPHIC / STATS FEATURE (MOBILE-FIRST)
    -------------------------------------------------------------------------- */
 .stats-banner {
   background-color: var(--color-surface);
   border-radius: var(--radius-ui);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
-  padding: 1.5rem;
-  margin-top: -2rem;
+  padding: 1rem 0.85rem;
+  margin-top: -1.25rem;
   position: relative;
   z-index: 10;
 }
@@ -639,16 +678,16 @@ ol {
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  gap: 0.65rem;
 }
 
 .stat-card {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0.75rem 0.65rem;
   background-color: var(--color-bg);
   border-radius: var(--radius-ui);
-  border-left: 4px solid var(--color-secondary);
+  border-left: 3px solid var(--color-secondary);
   transition: var(--transition-fast);
 }
 
@@ -659,25 +698,27 @@ ol {
 }
 
 .stat-number {
-  font-size: 1.85rem;
+  font-size: clamp(1.4rem, 5vw, 1.85rem);
   font-weight: 700;
   color: var(--color-secondary);
   line-height: 1.1;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.15rem;
 }
 
 .stat-label {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--color-primary);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 0.2rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.15rem;
+  line-height: 1.2;
 }
 
 .stat-sub {
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   color: var(--color-text-muted);
+  line-height: 1.25;
 }
 
 /* Visual SVG Chart Card */
@@ -1466,8 +1507,44 @@ textarea.form-control {
     align-items: center;
   }
 
+  .hero-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions .btn {
+    width: auto;
+  }
+
+  .stats-banner {
+    padding: 1.5rem;
+    margin-top: -1.75rem;
+  }
+
   .stats-grid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+    border-left-width: 4px;
+  }
+
+  .stat-number {
+    font-size: 1.85rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .stat-sub {
+    font-size: 0.78rem;
   }
 
   .facilities-grid {
@@ -1489,6 +1566,15 @@ textarea.form-control {
 
 /* Desktops (min-width: 1024px) */
 @media (min-width: 1024px) {
+  .brand-logo-img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+  }
+
   .section-padding {
     padding: 5rem 0;
   }
@@ -1523,6 +1609,14 @@ textarea.form-control {
 
   .hero-lead {
     font-size: 1.15rem;
+  }
+
+  .stats-banner {
+    margin-top: -2.5rem;
+  }
+
+  .stats-grid {
+    gap: 1.25rem;
   }
 
   .about-grid {
